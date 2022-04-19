@@ -1,9 +1,8 @@
+import GetStarted from "./comonents/GetStarted";
+import "../src/comonents/GetStarted.css";
+
 function App() {
-  return (
-    <div>
-      <h2>Let's get started!</h2>
-    </div>
-  );
+  return <GetStarted />;
 }
 
 export default App;
