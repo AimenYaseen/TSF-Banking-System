@@ -1,13 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import "./GetStarted.css";
 
-// const clickHandler = () => {
-//   console.log("Clicked!");
-// };
-
 const GetStarted = () => {
+  const navigate = useNavigate();
+
+  const clickHandler = () => {
+    navigate("/customers", { replace: true });
+  };
+
   return (
     <div>
       <div className="image" />;
@@ -18,12 +20,12 @@ const GetStarted = () => {
           The Sparks Foundation Web Development And Designing Internship
           Program.
         </p>
-        {/* <button className="btn" onClick={clickHandler}>
+        <button className="btn" onClick={clickHandler}>
           Get Started
-        </button> */}
-        <Link className="btn" to="/customers">
+        </button>
+        {/* <Link className="btn" to="/customers">
           Get Started
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

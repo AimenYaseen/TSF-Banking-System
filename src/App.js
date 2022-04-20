@@ -11,10 +11,15 @@ function App() {
       <Routes>
         <Route path="/" element={<GetStarted />} />
         <Route path="/customers" element={<Customers />} />
+        <Route path="/customers/:customerId" element={<CustomerDetail />} />
         <Route path="/history" element={<TransferHistory />} />
         <Route
-          path="/customer_detail/:customerId"
-          element={<CustomerDetail />}
+          path="*"
+          element={
+            <main style={{ padding: "1rem" }}>
+              <p>There's nothing here!</p>
+            </main>
+          }
         />
       </Routes>
     </div>
