@@ -3,12 +3,17 @@
   flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 1rem;
-  text-align: left;
+  /* text-align: left; */
+}
+
+.new-expense__control {
+  flex-direction: row;
 }
 
 .new-expense__control label {
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  color: #fff;
+  margin: 0 1rem 0.5rem 0;
   display: block;
 }
 
@@ -22,5 +27,5 @@
 }
 
 .new-expense__actions {
-  text-align: right;
+  text-align: center;
 }

@@ -5,6 +5,7 @@
   width: 50rem;
   max-width: 80%;
   border-radius: 12px;
+  text-align: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
@@ -48,23 +49,25 @@
 
 .container button {
   font: inherit;
+  font-weight: bold;
   cursor: pointer;
-  padding: 1rem 2rem;
-  border: 1px solid #40005d;
-  background-color: #40005d;
-  color: white;
+  padding: 0.5rem 2rem;
+  border: 3px solid #02224d;
+  background-color: #fff;
+  color: #02224d;
   border-radius: 12px;
-  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 .container button:hover,
 .container button:active {
-  background-color: #510674;
-  border-color: #510674;
+  background-color: #02224d;
+  border-color: #fff;
+  color: #fff;
 }
 
 .container button.alternative {
-  color: #220131;
+  color: #02224d;
   border-color: transparent;
   background-color: transparent;
 }

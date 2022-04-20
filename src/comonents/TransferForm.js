@@ -1,26 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./TransferForm.css";
 
 const TransferForm = () => {
+  const [sender, setSender] = useState("");
+  const [receiver, setReceiver] = useState("");
+  const [amount, setAmount] = useState("");
+
+  const formSubmitHandler = (event) => {
+    event.preventDefault();
+  };
+
   return (
-    <form>
+    <form onSubmit={formSubmitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
-          <label>Title</label>
-          <input type="text" />
+          <label>Sender</label>
+          <input
+            type="text"
+            value={sender}
+            onChange={(event) => {
+              setSender(event.target.value);
+            }}
+          />
+        </div>
+        <div className="new-expense__control">
+          <label>Receiver</label>
+          <input
+            type="text"
+            value={receiver}
+            onChange={(event) => {
+              setReceiver(event.target.value);
+            }}
+          />
         </div>
         <div className="new-expense__control">
           <label>Amount</label>
-          <input type="number" />
-        </div>
-        <div className="new-expense__control">
-          <label>Date</label>
-          <input type="date" min="2019-01-01" max="2022-12-31" />
+          <input
+            type="number"
+            value={amount}
+            onChange={(event) => {
+              setAmount(event.target.value);
+            }}
+          />
         </div>
       </div>
       <div className="new-expense__actions">
-        <button type="submit">Add Expense</button>
+        <button type="submit">Transfer</button>
       </div>
     </form>
   );
