@@ -23,6 +23,16 @@ const MainHeader = () => {
               className={({ isActive }) =>
                 isActive ? classes.active : undefined
               }
+              to="/transfer"
+            >
+              Transfer Money
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? classes.active : undefined
+              }
               to="/history"
             >
               History

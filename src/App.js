@@ -4,6 +4,7 @@ import GetStarted from "./screens/GetStarted";
 import Customers from "./screens/Customers";
 import TransferHistory from "./screens/TransferHistory";
 import CustomerDetail from "./screens/CustomerDetail";
+import TransferMoney from "./screens/TransferMoney";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/customers" element={<Customers />} />
         <Route path="/customers/:customerId" element={<CustomerDetail />} />
         <Route path="/history" element={<TransferHistory />} />
+        <Route path="/transfer" element={<TransferMoney />} />
         <Route
           path="*"
           element={
