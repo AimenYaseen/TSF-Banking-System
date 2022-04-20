@@ -25,7 +25,7 @@ const MainHeader = () => {
               }
               to="/history"
             >
-              Transfer History
+              History
             </NavLink>
           </li>
         </ul>
