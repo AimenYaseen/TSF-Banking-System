@@ -1,6 +1,6 @@
 .customer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 0.5rem;
   margin: 1.5rem 0 1rem 1rem;
@@ -13,7 +13,7 @@
   color: #3a3a3a;
   font-size: 1rem;
   /* flex: 1; */
-  margin: 0 7rem;
+  margin: 0 auto;
   color: white;
 }
 

@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 //import { Link } from "react-router-dom";
 
 import Customer from "../comonents/Customer";
 import MainHeader from "../comonents/MainHeader";
+import CusContext from "../store/CusContext";
 import "./Customers.css";
 
 const Customers = () => {
+  const { customers, getCustomers } = useContext(CusContext);
+
+  useEffect(() => {
+    getCustomers();
+  }, []);
+
   return (
     <div>
       <MainHeader />
@@ -18,8 +25,19 @@ const Customers = () => {
           <h2>Link</h2>
         </div>
         <div className="customers">
-          <Customer name="Name" email="Email" amount="Balance" />
-          <Customer name="Name" email="Email" amount="Balance" />
+          {customers &&
+            customers.map((customer) => {
+              console.log(customer.id);
+              return (
+                <Customer
+                  key={customer.id}
+                  Id={customer.id}
+                  name={customer.name}
+                  email={customer.email}
+                  amount={customer.amount}
+                />
+              );
+            })}
         </div>
       </main>
     </div>
