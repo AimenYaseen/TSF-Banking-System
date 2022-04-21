@@ -36,12 +36,13 @@ export const CusContextProvider = (props) => {
     getDocs(ref)
       .then((response) => {
         const his = response.docs.map((doc) => {
-          const { sender, receiver, amount } = doc.data();
+          const { sender, receiver, amount, date } = doc.data();
           return {
             id: doc.id,
             sender,
             receiver,
             amount,
+            date,
           };
         });
         setHistory(his);

@@ -43,8 +43,8 @@ const TransferForm = () => {
     addDoc(ref, {
       sender,
       receiver,
-      amount,
-      date: new Date(),
+      amount: parseInt(amount),
+      date: Date.now(),
     })
       .then((response) => {
         console.log(response);

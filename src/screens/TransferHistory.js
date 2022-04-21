@@ -22,11 +22,12 @@ const TransferHistory = () => {
           <h2>Sender</h2>
           <h2 id="rec">Reciever</h2>
           <h2>Transfered Amount</h2>
-          {/* <h2 id="date">Date & Time</h2> */}
+          <h2 id="date">Date & Time</h2>
         </div>
         <div className="customers">
           {history &&
             history.map((customer, index) => {
+              console.log(customer);
               return (
                 <Transfer
                   key={customer.id}
